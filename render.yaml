@@ -2,13 +2,13 @@ services:
 - type: web
   name: wordpress
   env: docker
-  plan: starter
+  plan: standard
   region: frankfurt
   autoDeploy: false
   disk:
     name: wordpress
     mountPath: /var/www/html
-    sizeGB: 5
+    sizeGB: 20
   envVars:
   - key: WORDPRESS_DB_HOST
     fromService:
@@ -34,13 +34,13 @@ services:
   name: mysql-wordpress
   repo: https://github.com/render-examples/mysql.git
   env: docker
-  plan: starter
+  plan: standard
   region: frankfurt
   autoDeploy: false
   disk:
     name: mysql-wordpress
     mountPath: /var/lib/mysql
-    sizeGB: 5
+    sizeGB: 20
   envVars:
   - key: MYSQL_DATABASE
     value: mysql
