@@ -2,7 +2,7 @@ services:
 - type: web
   name: wordpress
   env: docker
-  plan: hobby
+  plan: starter
   region: frankfurt
   autoDeploy: false
   disk:
@@ -34,7 +34,7 @@ services:
   name: mysql-wordpress
   repo: https://github.com/render-examples/mysql.git
   env: docker
-  plan: hobby
+  plan: starter
   region: frankfurt
   autoDeploy: false
   disk:
